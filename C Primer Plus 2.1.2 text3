@@ -1,3 +1,4 @@
+//小程序，输入年龄转换为天数，不考虑闰年
 #include<stdio.h>
 int main(void)
 {
