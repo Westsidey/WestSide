@@ -1,0 +1,22 @@
+//C Primer Plus 2.1.2 text8
+//在自定义函数中调用自定义函数，形成打印
+#include<stdio.h>
+int two()
+{
+	printf("two\n");
+	return 0;
+}
+int one_three(void)
+{
+	printf("one\n");
+	two();
+	printf("three\n");
+	return 0;
+}
+int main(void)
+{
+	printf("starting now：\n");
+	one_three();
+	printf("done!\n");
+	return 0;
+}
