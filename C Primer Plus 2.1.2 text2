@@ -1,7 +1,8 @@
+//小程序，打印自己的姓名和地址
 #include<stdio.h>
 int main(void)
 {
 	printf("My name is Jason Song\n");
-	printf("My adress is 5单元203，乌龙池91号，高笋塘街道，万州，重庆，中国\n");
+	printf("My adress is 1单元333，乌龙池55号，高笋塘街道，万州，重庆，中国\n");
 	return 0;
 }
