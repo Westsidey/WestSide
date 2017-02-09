@@ -1,0 +1,13 @@
+//C Primer Plus 2.1.2 text6
+//创建一个整形变量，求变量的双倍、平方
+#include<stdio.h>
+int main(void)
+{
+	int toes=10;
+	int d;
+	int p;
+	d=toes*2;
+	p=toes*toes;
+	printf("toes=%d,toes的双倍为:%d，toes的平方为%d\n",toes,d,p);
+	return 0;
+}
