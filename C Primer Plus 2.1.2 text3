@@ -1,0 +1,11 @@
+#include<stdio.h>
+int main(void)
+{
+	int age;
+	int day;
+	printf("请输入你的年龄：\n");
+	scanf_s("%d",&age);
+	day=age*365;
+	printf("My age is %d,I was live for %d days.\n",age,day);
+	return 0;
+}
