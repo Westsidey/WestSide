@@ -1,3 +1,4 @@
+//小程序，打印自己的名字
 #include<stdio.h>
 int main(void)
 {
