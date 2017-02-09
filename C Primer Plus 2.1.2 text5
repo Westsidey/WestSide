@@ -1,0 +1,21 @@
+//C Primer Plus 2.1.2 text5
+//编写一个程序，生成打印，需调用2个自定义函数
+#include<stdio.h>
+int ic(void)
+{
+	printf("India,China\n");
+	return 0;
+}
+int br(void)
+{
+	printf("Brazil,Russia\n");
+	return 0;
+}
+int main(void)
+{
+	printf("Brazil,Russia,");
+	ic();
+	printf("India,China,\n");
+	br();
+	return 0;
+}
