@@ -1,0 +1,21 @@
+//C Primer Plus 2.1.2 text7
+//调用自定义函数按格式打印
+#include<stdio.h>
+int Smile(void)
+{
+	printf("Smile!");
+	return 0;
+}
+int main(void)
+{
+	Smile();
+	Smile();
+	Smile();
+	printf("\n");
+	Smile();
+	Smile();
+	printf("\n");
+	Smile();
+	printf("\n");
+	return 0;
+}
