@@ -1,0 +1,141 @@
+#include<stdio.h>
+/*
+-----尺码对照表-----
+尺码   身高     体重
+XS  155-160  100-115
+S   160-170  115-130
+M   170-175  135-150
+L   175-180  150-160
+XL  180-185  160-180
+XXL 185-190  180-200
+*/
+int main(void)
+{
+	printf("**********欢迎使用[尺码计算器]：WestSide，code by visual studio.**********\n");
+	int height;
+	int weight;
+	while (1)
+	{
+		while (1)
+		{
+			while (1)
+			{
+				printf("请输入您的身高[厘米]\n");
+				scanf_s("%d", &height);
+				if (height < 155)
+				{
+					printf("你矮成了武大郎\n");
+				}
+				if (height > 190)
+				{
+					printf("你高得呛尼玛个擎天柱\n");
+				}
+				else break;
+			}
+			printf("请输入您的体重[斤]\n");
+			scanf_s("%d", &weight);
+			if (weight < 100)
+			{
+				printf("你瘦成孙猴子\n");
+			}
+			if (weight > 200)
+			{
+				printf("你胖得呛尼玛头猪");
+			}
+			else break;
+		}
+		if (height >= 155 && height < 160)
+		{
+			if (weight >= 100 && weight < 115)
+			{
+				printf("您适合穿[XS]号\n");
+			}
+			else if (weight < 100)
+			{
+				printf("您的体型偏瘦，建议增加营养\n");
+			}
+			else if (weight >= 115)
+			{
+				printf("您的体型偏胖，建议增加锻炼\n");
+			}
+		}
+		else if (height >= 160 && height < 170)
+		{
+			if (weight >= 115 && weight < 130)//参照上面的判断，如果体重在标准内，则打印尺码，如果体重偏低，则打印偏瘦，体重偏高，则打印偏胖
+			{
+				printf("你适合穿[S]号\n");
+			}
+			else if (weight < 115)
+			{
+				printf("您的体型偏瘦，建议增加营养\n");
+			}
+			else if (weight >= 130)
+			{
+				printf("您的体型偏胖，建议增加锻炼\n");
+			}
+		}
+		else if (height >= 170 && height < 175)
+		{
+			if (weight >= 135 && weight < 150)
+			{
+				printf("您适合穿[M]号\n");
+			}
+			else if (weight < 135)
+			{
+				printf("您的体型偏瘦，建议增加营养\n");
+			}
+			else if (weight >= 150)
+			{
+				printf("您的体型偏胖，建议增加锻炼\n");
+			}
+		}
+		else if (height >= 175 && height < 180)
+		{
+			if (weight >= 150 && weight < 160)
+			{
+				printf("您适合穿[L]号\n");
+			}
+			else if (weight < 150)
+			{
+				printf("您的体型偏瘦，建议增加营养\n");
+			}
+			else if (weight >= 160)
+			{
+				printf("您的体型偏胖，建议增加锻炼\n");
+			}
+		}
+		else if (height >= 180 && height < 185)
+		{
+			if (weight >= 160 && weight < 180)
+			{
+				printf("您适合穿[XL]号");
+			}
+			else if (weight < 160)
+			{
+				printf("您的体型偏瘦，建议增加营养\n");
+			}
+			else if (weight >= 180)
+			{
+				printf("您的体型偏胖，建议增加锻炼\n");
+			}
+		}
+		else if (height >= 185 && height < 190)
+		{
+			if (weight >= 180 && weight < 200)
+			{
+				printf("您适合穿[XXL]号\n");
+			}
+			if (weight < 180)
+			{
+				printf("您的体型偏瘦，建议增加营养\n");
+			}
+			else if (weight >= 200)
+			{
+				printf("您的体型偏胖，建议增加锻炼\n");
+			}
+		}
+
+		printf("**********感谢使用[尺码计算器]，WestSide，code by visual studio.**********\n");
+	}
+	return 0;
+}
