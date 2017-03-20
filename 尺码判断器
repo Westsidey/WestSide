@@ -11,40 +11,58 @@ XXL 185-190  180-200
 */
 int main(void)
 {
-	printf("**********欢迎使用[尺码计算器]：WestSide，code by visual studio.**********\n");
+	//定义身高变量：height，体重变量：weight；尺码：n；
 	int height;
 	int weight;
-	while (1)
+	int n;
+	//由用户输入身高
+	//判断用户的身高是否为正常范围
+	do
 	{
-		while (1)
+		printf("**********欢迎使用尺码判断器**********\n");
+		printf("请输入身高:\n");
+		scanf_s("%d", &height);
+		if (height < 155)
 		{
-			while (1)
-			{
-				printf("请输入您的身高[厘米]\n");
-				scanf_s("%d", &height);
-				if (height < 155)
-				{
-					printf("你矮成了武大郎\n");
-				}
-				if (height > 190)
-				{
-					printf("你高得呛尼玛个擎天柱\n");
-				}
-				else break;
-			}
-			printf("请输入您的体重[斤]\n");
-			scanf_s("%d", &weight);
-			if (weight < 100)
-			{
-				printf("你瘦成孙猴子\n");
-			}
-			if (weight > 200)
-			{
-				printf("你胖得呛尼玛头猪");
-			}
-			else break;
+			printf("你太矮了，建议增加锻炼，或重新输入：\n\n");
+			continue;
+		}		
+		else if(height>190)
+		{
+			printf("你太高了，暂时无法识别，你可以重新输入：\n\n");
+			continue;
 		}
-		if (height >= 155 && height < 160)
+		else
+		{
+			continue;
+		}
+		
+	} while (height < 155 || height>190);
+
+	//由用户输入体重
+	//判断用户的体重是否为正常范围
+	do
+	{
+		printf("请输入体重：\n");
+		scanf_s("%d", &weight);
+		if (weight < 100)
+		{
+			printf("你太瘦了，建议补充营养，或重新输入：\n");
+			continue;
+		}
+		else if(weight>200)
+		{
+			printf("你太肥了，建议增加锻炼，或重新输入：\n");
+			continue;
+		}
+		else
+		{
+			continue;
+		}
+
+	} while (weight < 100 || weight>200);
+
+	if (height >= 155 && height < 160)
 		{
 			if (weight >= 100 && weight < 115)
 			{
@@ -134,8 +152,6 @@ int main(void)
 				printf("您的体型偏胖，建议增加锻炼\n");
 			}
 		}
-
 		printf("**********感谢使用[尺码计算器]，WestSide，code by visual studio.**********\n");
-	}
 	return 0;
 }
